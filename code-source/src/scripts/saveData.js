@@ -90,11 +90,21 @@ fs.readFileSync(dirContact, "utf8").split(/\n/).forEach(function (data) {
     var spanNumber = document.createElement('span');
     spanNumber.className = 'otherDetails contactDetails';
     spanNumber.innerHTML = dataArray [2];
+
     var spanCall = document.createElement('div');
     spanCall.className = "spanCall";
    
     var iCall = document.createElement('i');
     iCall.className = "fa fa-phone icallPhone";
+    iCall.onclick = function(){
+
+        var data = dataArray [0];
+    
+        var date = new Date();
+        var time = date.getFullYear() +"-" +(date.getMonth() + 1) +"-" +date.getDate() + " " +date.getHours() +":" +date.getMinutes() +":" +date.getSeconds();
+        fs.appendFileSync(dirCall,  "\n"+data+ " " + time, "UTF-8", {flags: "a+"});
+
+    };
     spanCall.appendChild(iCall);
     li.appendChild(spanImage);
     li.appendChild(spanName);
