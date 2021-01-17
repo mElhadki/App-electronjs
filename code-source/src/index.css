@@ -1,0 +1,666 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
+
+* 			{margin: 0; padding: 0;}
+::selection {background: transparent;}
+body 		{color: #4196b7; font: normal 12px arial,sans-serif;}
+
+.nexus	 	{
+    border-radius: 22px;
+    width: 300px;
+    height: 620px;
+    margin: 0 auto;
+    position: relative;
+    background: rgb(234,234,234);
+    background: -moz-linear-gradient(-45deg, rgba(234,234,234,1) 0%, rgba(173,173,173,1) 28%, rgba(224,224,224,1) 40%, rgba(191,191,191,1) 51%, rgba(135,135,135,1) 65%, rgba(244,244,244,1) 75%, rgba(173,173,173,1) 87%, rgba(186,186,186,1) 99%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(234,234,234,1)), color-stop(28%,rgba(173,173,173,1)), color-stop(40%,rgba(224,224,224,1)), color-stop(51%,rgba(191,191,191,1)), color-stop(65%,rgba(135,135,135,1)), color-stop(75%,rgba(244,244,244,1)), color-stop(87%,rgba(173,173,173,1)), color-stop(99%,rgba(186,186,186,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(234,234,234,1) 0%,rgba(173,173,173,1) 28%,rgba(224,224,224,1) 40%,rgba(191,191,191,1) 51%,rgba(135,135,135,1) 65%,rgba(244,244,244,1) 75%,rgba(173,173,173,1) 87%,rgba(186,186,186,1) 99%);
+    background: -o-linear-gradient(-45deg, rgba(234,234,234,1) 0%,rgba(173,173,173,1) 28%,rgba(224,224,224,1) 40%,rgba(191,191,191,1) 51%,rgba(135,135,135,1) 65%,rgba(244,244,244,1) 75%,rgba(173,173,173,1) 87%,rgba(186,186,186,1) 99%);
+    background: -ms-linear-gradient(-45deg, rgba(234,234,234,1) 0%,rgba(173,173,173,1) 28%,rgba(224,224,224,1) 40%,rgba(191,191,191,1) 51%,rgba(135,135,135,1) 65%,rgba(244,244,244,1) 75%,rgba(173,173,173,1) 87%,rgba(186,186,186,1) 99%);
+    background: linear-gradient(135deg, rgba(234,234,234,1) 0%,rgba(173,173,173,1) 28%,rgba(224,224,224,1) 40%,rgba(191,191,191,1) 51%,rgba(135,135,135,1) 65%,rgba(244,244,244,1) 75%,rgba(173,173,173,1) 87%,rgba(186,186,186,1) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#bababa',GradientType=1 );
+   
+   }
+
+
+.phone-infos 	{width: 100%; height: 17px; background: #303030;}
+.phone-infos span  	{float: right; font-size: 11px; margin: 2px 3px;}
+.phone-infos .battery  	{width: 8px; height: 10px; background: #4196b7; margin-top: 2px; position: relative; margin-top: 4px;}
+.phone-infos .battery:before  	{width: 4px; height: 2px; position: absolute; left: 2px; top: -2px; background: #4196b7; content: '';}
+.phone-infos .gsm   	{position: relative; height: 12px; margin-right: 10px;}
+.phone-infos .gsm b  	{float: left; position: absolute; bottom: 0;}
+.phone-infos .gsm b:before  	{position: absolute; content: ''; top: -3px; width: 0; height: 0; border-bottom: 3px solid #4196b7; border-left: 3px solid transparent;}
+.phone-infos .gsm .signal1  	{width: 3px; height: 0px; background: #4196b7; left: -8px;}
+.phone-infos .gsm .signal2  	{width: 3px; height: 3px; background: #4196b7; left: -4px;}
+.phone-infos .gsm .signal3  	{width: 3px; height: 7px; background: #4196b7;}
+.phone-infos .gsm .signal4  	{width: 3px; height: 11px; background: #808184; left: 4px;}
+.phone-infos .gsm .signal4:before  	{border-bottom: 3px solid #808184; border-left: 3px solid transparent;}
+
+.phone-tabs 	{border-bottom: 1px solid #858383; background: #303030; height: 50px;}
+.phone-tabs li 	{float: left; list-style: none; -webkit-transition:all .05s ease-in; -moz-transition:all .05s ease-in; -o-transition:all .05s ease-in; transition:all .05s ease-in;}
+.phone-tabs li a 	{-webkit-transition:all .05s ease-in;  -moz-transition:all .05s ease-in;  -o-transition:all .05s ease-in; transition:all .05s ease-in; text-decoration: none; background: #303030; cursor:pointer; height: 40px;  width:94px; display: block; text-align: center; position: relative; padding-top: 10px;}
+.phone-tabs li a:active 	{background: rgba(104,208,249,.4);}
+.phone-tabs li a:before 	{height: 20px; width: 1px; background: #858383; position: absolute; content: ''; left: 0; top: 16px;}
+.phone-tabs li:first-child a:before 	{display: none;}
+.phone-tabs li.current a:after 	{position: absolute; content: ''; left: 0px; bottom: 0px; width: 100%; height: 5px; background: #4196b7;}
+
+.phone-tab-contents  	{width: 100%; height: 365px;  overflow: hidden;}
+.phone-tab-contents .tab 	{width: 100%; height: 365px; position: absolute;position: absolute; -webkit-transition:all .25s ease-in; -moz-transition:all .25s ease-in; -o-transition:all .25s ease-in; transition:all .25s ease-in;}
+.phone-tab-contents .tab.clock	{left: 282px;}
+.phone-tab-contents .tab.peoples{left: 564px;}
+
+.phone-tab-contents.getclock .tab.phone	{left: -282px;}
+.phone-tab-contents.getclock .tab.clock	{left: 0px;}
+.phone-tab-contents.getclock .tab.peoples	{left: 282px;}
+
+.phone-tab-contents.getpeoples .tab.phone	{left: -564px;}
+.phone-tab-contents.getpeoples .tab.clock	{left: -282px;}
+.phone-tab-contents.getpeoples .tab.peoples	{left: 0px;}
+
+.phone-tab-contents .tab.clock p:first-child,
+.phone-tab-contents .tab.peoples p:first-child {margin-top: 50px;}
+.phone-tab-contents .tab.peoples p,
+.phone-tab-contents .tab.clock p	{width: 90%; padding: 10px 5% 0; text-align: center; color: #bbb;}
+.phone-tab-contents .tab.peoples p a,
+.phone-tab-contents .tab.clock p a	{color: #fff;}
+
+.main-btns 	{width: 100%; height: 34px; background: #303030;}
+.main-btns li 	{list-style: none; float: left;}
+.main-btns li a {width: 30px; display: block; width: 94px; height: 34px; text-align: center;}
+
+.number-area 	{color: #fff; font-size: 20px; text-align: center; padding: 20px 0 20px; width: 100%; overflow: hidden; border-bottom: 1px solid #333;}
+.number-area .numbers 	{width: 230px; float: left; padding: 0 10px; height: 14px;}
+.number-area .delete-btn 	{float: right; margin-right: 10px; cursor: pointer;}
+
+.numbers-container  	{overflow: hidden;}
+.numbers-container span 	{width: 94px; height: 30px; float: left; font-size: 30px; text-indent: 22px; position: relative; padding: 15px 0; cursor: pointer;}
+.numbers-container span:active 	{background: rgba(104,208,249,.4);}
+.numbers-container span em 	{font-size: 12px; color: #fff; font-style: normal; position: absolute; left: 22px; bottom: 15px; padding-bottom: 5px; }
+.numbers-container span em.brd:before 	{position: absolute; width: 14px; height: 2px; background: #fff; content: ''; top: 9px; left: 24px;}
+.numbers-container span em:after 	{width: 35px; height: 2px; background: #4196b7; content: ''; position: absolute; top: 16px; left: 22px;}
+.numbers-container span.fff {color: #fff;}
+
+.call-btn 	{width: 100%; text-align: center; border-top: 1px solid #333; padding-top: 10px;}
+
+/* 	Icon Group 	*/
+.icon 	{display: inline-block; font-style: normal; position: relative;}
+
+.icon.phone 	{background: #fff; width: 5px; height: 26px; -webkit-transform: rotate(145deg); -moz-transform: rotate(145deg); -o-transform: rotate(145deg); transform: rotate(145deg); border-radius: 0 6px 6px 0; margin-top: 5px;}
+.icon.phone:before 	{position: absolute; content: ''; width: 8px; height: 9px; background: #fff; left: -6px; bottom: -1px; border-radius: 3px 6px 7px 3px;}
+.icon.phone:after 	{position: absolute; content: ''; width: 8px; height: 9px; background: #fff; left: -6px; top: -1px; border-radius: 3px 6px 7px 3px;}
+
+.icon.clock 	{background: #303030; width: 22px; height: 22px; border: 2px solid #fff; border-radius: 22px; margin-top: 4px;}
+.icon.clock:before 	{position: absolute; content: ''; height: 9px; width: 2px; background: #fff; top: 2px; left: 10px;}
+.icon.clock:after 	{position: absolute; content: ''; height: 9px; width: 2px; background: #fff; top: 9px; -webkit-transform: rotate(120deg); -o-transform: rotate(120deg); -moz-transform: rotate(120deg); transform: rotate(120deg); left: 14px;}
+
+.icon.peoples 	{background: #fff; height: 10px; width: 22px; border-radius: 12px 12px 0 0; margin-top: 20px;}
+.icon.peoples:after 	{position: absolute; content: ''; background: #fff; width: 14px; height: 14px; border: 2px solid #303030; border-radius: 18px; top: -14px; left: 2px; z-index: 10;}
+.icon.peoples:before 	{position: absolute; content: ''; background: #303030; width: 10px; height: 5px; left: 6px; top: -5px; z-index: 20; border-radius: 0 0 15px 15px;}
+
+.icon.close 	{font-size: 12px; color: #303030; background: #fff; width: 14px; height: 12px;line-height: 12px; margin-top: 5px;}
+.icon.close:before 	{position:absolute;content:''; left:-8px; width: 0px; height: 0px; border-style: solid; border-width: 6.5px 8px 6.5px 0; border-color: transparent #ffffff transparent transparent; }
+
+.icon.home 		{width: 25px; height: 8px; border: 2px solid #bbbbbb; border-top: 0; margin-top: 15px;}
+.icon.home:after {width: 2px; height: 17px; background: #bbbbbb; position: absolute; top: -12px; left: 5px; content: ''; -webkit-transform: rotate(70deg); -moz-transform: rotate(70deg); -o-transform: rotate(70deg); transform: rotate(70deg);}
+.icon.home:before {width: 2px; height: 17px; background: #bbbbbb; position: absolute; top: -12px; right: 5px; content: ''; -webkit-transform: rotate(110deg); -moz-transform: rotate(110deg); -o-transform: rotate(110deg); transform: rotate(110deg);}
+
+.icon.windows 		{width: 20px; height: 8px; border: 2px solid #bbbbbb;  margin-top: 13px;}
+.icon.windows:after {width: 2px; height: 14px; background: #bbbbbb; position: absolute; content: ''; right: -6px; top: -6px;}
+.icon.windows:before {width: 22px; height: 2px; background: #bbbbbb; position: absolute; content: ''; right: -4px; top: -6px;}
+
+.icon.back 		{width: 20px; height: 2px; background: #bbb; color: #bbb; font-size: 18px; line-height: 0px; text-indent: -16px; font-family: sans-serif; margin-top: 12px;}
+.icon.back:before {width: 7px; height: 11px; background: #303030; position: absolute; content: ''; left: 8px; z-index: 10; top: 2px;}
+.icon.back:after {width: 20px; height: 7px; border: 2px solid #bbb; position: absolute; content: ''; border-radius: 10px; }
+
+.power-button {
+  width: 36px;
+  height: 2px;
+  position: absolute;
+  margin-left: 224px;
+  margin-top: -2px;
+  background: rgb(234,234,234); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(234,234,234,1) 0%, rgba(173,173,173,1) 28%, rgba(224,224,224,1) 40%, rgba(191,191,191,1) 51%, rgba(135,135,135,1) 65%, rgba(244,244,244,1) 75%, rgba(173,173,173,1) 87%, rgba(186,186,186,1) 99%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(234,234,234,1)), color-stop(28%,rgba(173,173,173,1)), color-stop(40%,rgba(224,224,224,1)), color-stop(51%,rgba(191,191,191,1)), color-stop(65%,rgba(135,135,135,1)), color-stop(75%,rgba(244,244,244,1)), color-stop(87%,rgba(173,173,173,1)), color-stop(99%,rgba(186,186,186,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(234,234,234,1) 0%,rgba(173,173,173,1) 28%,rgba(224,224,224,1) 40%,rgba(191,191,191,1) 51%,rgba(135,135,135,1) 65%,rgba(244,244,244,1) 75%,rgba(173,173,173,1) 87%,rgba(186,186,186,1) 99%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(234,234,234,1) 0%,rgba(173,173,173,1) 28%,rgba(224,224,224,1) 40%,rgba(191,191,191,1) 51%,rgba(135,135,135,1) 65%,rgba(244,244,244,1) 75%,rgba(173,173,173,1) 87%,rgba(186,186,186,1) 99%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(234,234,234,1) 0%,rgba(173,173,173,1) 28%,rgba(224,224,224,1) 40%,rgba(191,191,191,1) 51%,rgba(135,135,135,1) 65%,rgba(244,244,244,1) 75%,rgba(173,173,173,1) 87%,rgba(186,186,186,1) 99%); /* IE10+ */
+background: linear-gradient(to right,  rgba(234,234,234,1) 0%,rgba(173,173,173,1) 28%,rgba(224,224,224,1) 40%,rgba(191,191,191,1) 51%,rgba(135,135,135,1) 65%,rgba(244,244,244,1) 75%,rgba(173,173,173,1) 87%,rgba(186,186,186,1) 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#bababa',GradientType=1 ); /* IE6-9 */
+
+}
+.lock-button {
+  width: 3px;
+  height: 35px;
+  position: absolute;
+  margin-left: -3px;
+  margin-top: 55px;
+  background: rgb(234,234,234); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(234,234,234,1) 0%, rgba(173,173,173,1) 28%, rgba(224,224,224,1) 40%, rgba(191,191,191,1) 51%, rgba(135,135,135,1) 65%, rgba(244,244,244,1) 75%, rgba(173,173,173,1) 87%, rgba(186,186,186,1) 99%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(234,234,234,1)), color-stop(28%,rgba(173,173,173,1)), color-stop(40%,rgba(224,224,224,1)), color-stop(51%,rgba(191,191,191,1)), color-stop(65%,rgba(135,135,135,1)), color-stop(75%,rgba(244,244,244,1)), color-stop(87%,rgba(173,173,173,1)), color-stop(99%,rgba(186,186,186,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(173,173,173,1) 28%,rgba(224,224,224,1) 40%,rgba(191,191,191,1) 51%,rgba(135,135,135,1) 65%,rgba(244,244,244,1) 75%,rgba(173,173,173,1) 87%,rgba(186,186,186,1) 99%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(173,173,173,1) 28%,rgba(224,224,224,1) 40%,rgba(191,191,191,1) 51%,rgba(135,135,135,1) 65%,rgba(244,244,244,1) 75%,rgba(173,173,173,1) 87%,rgba(186,186,186,1) 99%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(173,173,173,1) 28%,rgba(224,224,224,1) 40%,rgba(191,191,191,1) 51%,rgba(135,135,135,1) 65%,rgba(244,244,244,1) 75%,rgba(173,173,173,1) 87%,rgba(186,186,186,1) 99%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(234,234,234,1) 0%,rgba(173,173,173,1) 28%,rgba(224,224,224,1) 40%,rgba(191,191,191,1) 51%,rgba(135,135,135,1) 65%,rgba(244,244,244,1) 75%,rgba(173,173,173,1) 87%,rgba(186,186,186,1) 99%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#bababa',GradientType=0 ); /* IE6-9 */
+
+}
+.vol-up, .vol-down {
+  width: 3px;
+  height: 28px;
+  
+  position: absolute;
+  background: rgb(234,234,234); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(234,234,234,1) 0%, rgba(173,173,173,1) 28%, rgba(224,224,224,1) 40%, rgba(191,191,191,1) 51%, rgba(135,135,135,1) 65%, rgba(244,244,244,1) 75%, rgba(173,173,173,1) 87%, rgba(186,186,186,1) 99%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(234,234,234,1)), color-stop(28%,rgba(173,173,173,1)), color-stop(40%,rgba(224,224,224,1)), color-stop(51%,rgba(191,191,191,1)), color-stop(65%,rgba(135,135,135,1)), color-stop(75%,rgba(244,244,244,1)), color-stop(87%,rgba(173,173,173,1)), color-stop(99%,rgba(186,186,186,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(173,173,173,1) 28%,rgba(224,224,224,1) 40%,rgba(191,191,191,1) 51%,rgba(135,135,135,1) 65%,rgba(244,244,244,1) 75%,rgba(173,173,173,1) 87%,rgba(186,186,186,1) 99%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(173,173,173,1) 28%,rgba(224,224,224,1) 40%,rgba(191,191,191,1) 51%,rgba(135,135,135,1) 65%,rgba(244,244,244,1) 75%,rgba(173,173,173,1) 87%,rgba(186,186,186,1) 99%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(173,173,173,1) 28%,rgba(224,224,224,1) 40%,rgba(191,191,191,1) 51%,rgba(135,135,135,1) 65%,rgba(244,244,244,1) 75%,rgba(173,173,173,1) 87%,rgba(186,186,186,1) 99%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(234,234,234,1) 0%,rgba(173,173,173,1) 28%,rgba(224,224,224,1) 40%,rgba(191,191,191,1) 51%,rgba(135,135,135,1) 65%,rgba(244,244,244,1) 75%,rgba(173,173,173,1) 87%,rgba(186,186,186,1) 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#bababa',GradientType=0 ); /* IE6-9 */
+
+}
+.vol-up {
+  margin-left: -3px;
+  margin-top: 125px;
+}
+.vol-down {
+  margin-left: -3px;
+  margin-top: 180px;
+}
+
+.ridge {
+  background: rgba(255, 255, 255, 1.0);
+  -webkit-border-radius: 20px;
+  overflow: hidden; /* used for clipping the ridge reflection */
+  border-radius: 20px;
+  width: 294px;
+  height: 614px;
+  margin-top: 3px;
+  margin-left: 3px;
+  position: absolute;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.4);
+}
+.ridge-reflection {
+  width: 100%;
+  height:100%;
+  position: absolute;
+  background-size: cover;
+  pointer-events:none;
+background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.2) 92%,rgba(255,255,255,0.2) 99%,rgba(255,255,255,0.2) 100%); /* W3C */
+
+  
+-moz-transform: rotate(25deg) translateX(-190px) translateY(-30px);
+-webkit-transform: rotate(25deg) translateX(-190px) translateY(-30px);
+-o-transform: rotate(25deg) translateX(-190px) translateY(-30px);
+-ms-transform: rotate(25deg) translateX(-190px) translateY(-30px);
+transform: rotate(25deg) translateX(-190px) translateY(-30px);
+}
+.front-cam {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  background: rgba(70, 70, 70, 1.0);
+  margin-top: 17px;
+  margin-left: 85px;
+  -webkit-box-shadow:inset 0 0 2px 0 rgba(0,0,0,0.9);
+  box-shadow:inset 0 0 2px 0 rgba(0,0,0,0.9);
+}
+.front-cam-lens {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  
+  margin-top: 1px;
+  margin-left: 1px;
+ background: rgb(102,102,102); /* Old browsers */
+background: -moz-linear-gradient(-45deg,  rgba(102,102,102,1) 0%, rgba(76,76,76,1) 33%, rgba(132,132,132,1) 61%, rgba(38,38,38,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(102,102,102,1)), color-stop(33%,rgba(76,76,76,1)), color-stop(61%,rgba(132,132,132,1)), color-stop(100%,rgba(38,38,38,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg,  rgba(102,102,102,1) 0%,rgba(76,76,76,1) 33%,rgba(132,132,132,1) 61%,rgba(38,38,38,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg,  rgba(102,102,102,1) 0%,rgba(76,76,76,1) 33%,rgba(132,132,132,1) 61%,rgba(38,38,38,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  rgba(102,102,102,1) 0%,rgba(76,76,76,1) 33%,rgba(132,132,132,1) 61%,rgba(38,38,38,1) 100%); /* IE10+ */
+background: linear-gradient(135deg,  rgba(102,102,102,1) 0%,rgba(76,76,76,1) 33%,rgba(132,132,132,1) 61%,rgba(38,38,38,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#262626',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.fa-signal:before {
+  content: "\f012";
+  color:#00aadd;
+}
+
+.speaker-bezel {
+  position: absolute;
+  width: 86px;
+  height: 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.1);
+  margin-top: 15px;
+  margin-left: 117px;
+  background: rgb(229,225,237); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(229,225,237,1) 1%, rgba(247,247,247,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(229,225,237,1)), color-stop(100%,rgba(247,247,247,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(229,225,237,1) 1%,rgba(247,247,247,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(229,225,237,1) 1%,rgba(247,247,247,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(229,225,237,1) 1%,rgba(247,247,247,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(229,225,237,1) 1%,rgba(247,247,247,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e1ed', endColorstr='#f7f7f7',GradientType=0 ); /* IE6-9 */
+
+}
+
+#addContact{
+
+  background-color: #00aadd;
+  color: white;
+  width: 50%;
+  height: 30px;
+  border: none;
+  font-size: 20px;
+}
+.speaker {
+  position: absolute;
+  width: 80px;
+  height: 10px;
+  border-radius: 5px;
+  background: rgba(70, 70, 70, 1.0);
+  margin-top: 19px;
+  margin-left: 121px;
+  
+}
+.screen {
+  background: rgba(50, 50, 50, 1.0);
+  width: 286px;
+  height: 503px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-left: 4px;
+  position: absolute;
+  border-radius: 1px;
+  overflow: overlay;
+  overflow-x: hidden;
+
+}
+
+
+.screen::-webkit-scrollbar{
+  background:  rgba(50, 50, 50, 1.0);;
+  height: .5rem;
+  width: 0;
+}
+
+.screen::-webkit-scrollbar-thumb {
+  background:  rgba(50, 50, 50, 1.0);;
+  display: block;
+  border-radius: 2.5rem;
+}
+
+.home-button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    background: rgba(200, 200, 200, 1.0);
+    margin-top: 559px;
+    margin-left: 125px;
+    background: rgb(173,173,173);
+    background: -moz-linear-gradient(-45deg, rgba(173,173,173,1) 0%, rgba(89,89,89,1) 16%, rgba(178,178,178,1) 30%, rgba(71,71,71,1) 49%, rgba(96,96,96,1) 66%, rgba(43,43,43,1) 84%, rgba(79,79,79,1) 99%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(173,173,173,1)), color-stop(16%,rgba(89,89,89,1)), color-stop(30%,rgba(178,178,178,1)), color-stop(49%,rgba(71,71,71,1)), color-stop(66%,rgba(96,96,96,1)), color-stop(84%,rgba(43,43,43,1)), color-stop(99%,rgba(79,79,79,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(173,173,173,1) 0%,rgba(89,89,89,1) 16%,rgba(178,178,178,1) 30%,rgba(71,71,71,1) 49%,rgba(96,96,96,1) 66%,rgba(43,43,43,1) 84%,rgba(79,79,79,1) 99%);
+    background: -o-linear-gradient(-45deg, rgba(173,173,173,1) 0%,rgba(89,89,89,1) 16%,rgba(178,178,178,1) 30%,rgba(71,71,71,1) 49%,rgba(96,96,96,1) 66%,rgba(43,43,43,1) 84%,rgba(79,79,79,1) 99%);
+    background: -ms-linear-gradient(-45deg, rgba(173,173,173,1) 0%,rgba(89,89,89,1) 16%,rgba(178,178,178,1) 30%,rgba(71,71,71,1) 49%,rgba(96,96,96,1) 66%,rgba(43,43,43,1) 84%,rgba(79,79,79,1) 99%);
+    background: linear-gradient(135deg, rgba(173,173,173,1) 0%,rgba(89,89,89,1) 16%,rgba(178,178,178,1) 30%,rgba(71,71,71,1) 49%,rgba(96,96,96,1) 66%,rgba(43,43,43,1) 84%,rgba(79,79,79,1) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#adadad', endColorstr='#4f4f4f',GradientType=1 );
+}
+.home-button-inner {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 40px;
+    margin-top: 3px;
+    margin-left: 3px;
+    background: rgb(234,234,234);
+    background: -moz-linear-gradient(top, rgba(234,234,234,1) 0%, rgba(252,252,252,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(234,234,234,1)), color-stop(100%,rgba(252,252,252,1)));
+    background: -webkit-linear-gradient(top, rgba(234,234,234,1) 0%,rgba(252,252,252,1) 100%);
+    background: -o-linear-gradient(top, rgba(234,234,234,1) 0%,rgba(252,252,252,1) 100%);
+    background: -ms-linear-gradient(top, rgba(234,234,234,1) 0%,rgba(252,252,252,1) 100%);
+    background: linear-gradient(to bottom, rgba(234,234,234,1) 0%,rgba(252,252,252,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#fcfcfc',GradientType=0 );
+}
+.homescreen {
+    background: url(http://media.idownloadblog.com/wp-content/uploads/2013/06/iOS-7-Home-screen.jpeg) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+.status-bar { 
+  width: 100%;
+  height: 5%;
+  padding-top: 2px;
+  padding-left: 5px;
+  background: transparent;
+  z-index:3; 
+  position:relative;
+}
+span.center-text {
+  margin-left: 21%;
+}
+
+#carrier, #time {
+  font-weight: bolder;
+  font-size: 11px;
+  letter-spacing: 0.01em;
+}
+#time {
+  font-size: 12px;
+}
+i.fa-signal {
+  position: absolute;
+  right: 10px;
+  top: 4px;
+  color: rgba( 0, 0, 0, 0.9);
+}
+.callscreen-container {
+  display: none;
+  color: white;
+}
+.receiver-name {
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  margin-top: 25px;
+}
+.receiver-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
+  background: url(http://lorempixel.com/280/497/sports) no-repeat;
+  background-size: cover;
+  position:relative;
+  margin: 15px auto;
+  -webkit-box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+}
+#callit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.call-button-group {
+  position: relative;
+  height: 30%;
+  background: transparent;
+  padding: 5px;
+  text-align:center; 
+}
+
+.call-button-1, .call-button-2, .call-button-3, .call-button-4, .call-button-5, .call-button-6 {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border: 1px solid rgba(256, 256, 256, 0.8);
+  border-radius: 35px;
+  display: inline-block;
+  margin: 4px 8px;
+  text-align:center;
+}
+.call-button-1:hover, .call-button-2:hover, .call-button-3:hover, .call-button-4:hover, .call-button-5:hover, .call-button-6:hover {
+  background: rgba(256, 256, 256, 0.1);
+}
+
+.call-button-icon {
+  position: relative;
+  font-size: 2.0em;
+  margin-top: 6px;
+}
+
+.end-call-button {
+  margin: 12px auto;
+  position: relative;
+  text-align: center;
+  width: 80%;
+  height: 40px;
+  color: white;
+  background: rgb(255,76,76); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,76,76,1) 0%, rgba(244,73,73,1) 99%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,76,76,1)), color-stop(99%,rgba(244,73,73,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,76,76,1) 0%,rgba(244,73,73,1) 99%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,76,76,1) 0%,rgba(244,73,73,1) 99%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,76,76,1) 0%,rgba(244,73,73,1) 99%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,76,76,1) 0%,rgba(244,73,73,1) 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4c4c', endColorstr='#f44949',GradientType=0 ); /* IE6-9 */
+
+  /* border radius */
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  
+}
+
+.end-call-button:hover {
+  background: rgb(244,73,73); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(244,73,73,1) 1%, rgba(255,76,76,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(244,73,73,1)), color-stop(100%,rgba(255,76,76,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(244,73,73,1) 1%,rgba(255,76,76,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(244,73,73,1) 1%,rgba(255,76,76,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(244,73,73,1) 1%,rgba(255,76,76,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(244,73,73,1) 1%,rgba(255,76,76,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f44949', endColorstr='#ff4c4c',GradientType=0 ); /* IE6-9 */
+
+}
+.end-call-button-content {
+  font-size: 1.4em;
+  padding: 4px;
+}
+.numbers-container{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.numbers-container span {
+  width: 94px;
+  height: 30px;
+  float: left;
+  font-size: 30px;
+  text-indent: 22px;
+  position: relative;
+  padding: 15px 0;
+  cursor: pointer;
+
+}
+.numbers-container span em:after {
+ 
+  background: none;
+}
+.activeTab ul li {
+  padding-bottom: 13px !important;
+  margin-bottom: 13px !important;
+}
+.tabContent ul li {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 11px;
+  margin-bottom: 40px;
+  border-bottom: #eee solid 1px;
+  -webkit-transition: all .6s ease;
+  -moz-transition: all .6s ease;
+  transition: all .6s ease;
+}
+.contactDetails {
+  float: left;
+  margin-top: 7px;
+  font-size: 18px;
+  clear: right;
+  width: 64%;
+}
+.otherDetails {
+  float: left;
+  color: #999;
+  clear: right;
+  width: 64%;
+}
+.phoneNo {
+  margin-top: 7px;
+  color: #666;
+}
+.contactIcon {
+  width: 78px;
+  height: 78px;
+  text-align: center;
+  border-radius: 50px;
+  overflow: hidden;
+  float: left;
+  display: table;
+  vertical-align: middle;
+  margin-right: 20px;    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phoneIcone{
+font-size: 43px;
+}
+
+.suggestion {
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.0);
+  margin-top: -10px;
+  text-align: center;
+  color: #00AADD;
+  cursor: pointer;
+  display: none;
+}
+
+.custom-model-main {
+text-align: center;
+overflow: hidden;
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0; /* z-index: 1050; */
+-webkit-overflow-scrolling: touch;
+outline: 0;
+opacity: 0;
+transition: opacity 0.15s linear, z-index 0.15;
+z-index: -1;
+overflow-x: hidden;
+overflow-y: auto;
+}
+
+.model-open {
+z-index: 99999;
+opacity: 1;
+overflow: hidden;
+}
+.custom-model-inner {
+
+transform: translate(0, -25%);
+transition: transform 0.3s ease-out;
+transition: transform 0.3s ease-out;
+display: inline-block;
+vertical-align: middle;
+width: 600px;
+margin: 30px auto;
+max-width: 97%;
+}
+.custom-model-wrap {
+display: block;
+width: 100%;
+position: relative;
+background: rgba(50, 50, 50, 1.0);
+border: 1px solid #999;
+border: 1px solid rgba(0, 0, 0, 0.2);
+border-radius: 6px;
+-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+background-clip: padding-box;
+outline: 0;
+text-align: left;
+padding: 20px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+max-height: calc(100vh - 70px);
+overflow-y: auto;
+}
+.model-open .custom-model-inner {
+-webkit-transform: translate(0, 0);
+-ms-transform: translate(0, 0);
+transform: translate(0, 0);
+position: relative;
+z-index: 999;
+}
+.model-open .bg-overlay {
+background: rgba(0, 0, 0, 0.6);
+z-index: 99;
+}
+.bg-overlay {
+background: rgba(0, 0, 0, 0);
+height: 100vh;
+width: 100%;
+position: fixed;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+z-index: 0;
+-webkit-transition: background 0.15s linear;
+-o-transition: background 0.15s linear;
+transition: background 0.15s linear;
+}
+.close-btn {
+position: absolute;
+right: 0;
+top: -30px;
+cursor: pointer;
+z-index: 99;
+font-size: 30px;
+color: #fff;
+}
+
+@media screen and (min-width:800px){
+.custom-model-main:before {
+  content: "";
+  display: inline-block;
+  height: auto;
+  vertical-align: middle;
+  margin-right: -0px;
+  height: 100%;
+}
+}
+@media screen and (max-width:799px){
+.custom-model-inner{margin-top: 45px;}
+}
+
+.contactName{
+  background: rgba(50, 50, 50, 1.0);
+  border: 1px solid #4196b7;
+  height: 31px;
+  border-radius: 2px;
+  margin-bottom: 13px;
+  padding: 6px;
+  outline: none;
+    color: #fff;
+}
+
+.spanCall{
+  float: right;
+    position: relative;
+    bottom: 31px;
+    right: 15px;
+    display: flex;
+    cursor: pointer;
+}
+.icallPhone{
+  transform: rotate(262deg);
+  font-size: 33px;
+
+}

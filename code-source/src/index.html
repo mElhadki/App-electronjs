@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Maria Phone</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+
+    <div class="nexus">
+      <div class="power-button">
+      </div>
+      <div class="lock-button">
+      </div>
+      <div class="vol-up">
+      </div>
+      <div class="vol-down">
+      </div>
+      <div class="ridge">
+          <div class="ridge-reflection"></div><!-- end ridge reflection -->
+          <div class="front-cam">
+            <div class="front-cam-lens">
+            </div>
+          </div>
+          <div class="speaker-bezel">
+          </div>
+          <div class="speaker">
+          </div>
+      <div class="screen">
+          <div class="homescreen"></div> <!-- end homescreen -->
+
+          <div class="status-bar">
+              <span class="left-text" id="carrier">T-Mobile</span>
+              <span class="center-text" id="time">10:20</span>
+               <i class="fa fa-signal"></i>
+            </div>
+
+
+            <div class="callscreen">
+          </div> <!-- end callscreen -->
+          <div class="callscreen-container">
+            <div class="receiver-name">
+                Appel en cours
+            </div>
+            <div class="receiver-photo">
+              <div class="loadingtrail"></div>
+            </div>
+            <div class="call-button-group">
+              <div class="call-button-1">
+                <div class="call-button-icon">
+                  <i class="fa fa-microphone-slash"></i>
+                </div>
+              </div>
+              <div class="call-button-2">
+                <div class="call-button-icon">
+                  <i class="fa fa-th"></i>
+                </div>
+              </div>
+              <div class="call-button-3">
+                <div class="call-button-icon">
+                  <i class="fa fa-volume-up"></i> 
+                </div>
+              </div>
+              <div class="call-button-4">
+                <div class="call-button-icon">
+                  <i class="fa fa-users"></i>
+                </div>
+              </div>
+              <div class="call-button-5">
+                <div class="call-button-icon">
+                  <i class="fa fa-video-camera"></i> 
+                </div>
+              </div>
+              <div class="call-button-6">
+                <div class="call-button-icon">
+                  <i class="fa fa-pause"></i>
+                </div>
+              </div>
+            </div> <!-- end call button group -->
+            <div class="end-call-button"> 
+              <div class="end-call-button-content">
+                <i class="fa fa-phone"></i> End call
+              </div>
+            </div>
+          </div><!-- end call screen container -->
+
+          <ul class="phone-tabs">
+              <li class="current">
+                  <a class="getphone"><i class="icon phone"></i></a>
+              </li>
+              <li>
+                  <a class="getclock" id="clock"><i class="icon clock"></i></a>
+              </li>
+              <li>
+                  <a class="getpeoples"><i class="icon peoples blue"></i></a>
+              </li>
+          </ul>
+          <div class="phone-tab-contents">
+              <div class="tab phone current">
+                  <div class="number-area">
+                      <span id="numbers" class="numbers"></span>
+                      <a class="delete-btn">
+                      <i class="icon close">x</i>
+                      </a>
+                  </div>
+                  <div class="suggestion" id="suggestion">
+                    + Add to contacts
+                   </div><br/>
+                   <div class="custom-model-main">
+                    <div class="custom-model-inner">
+                    <div class="close-btn">×</div>
+                        <div class="custom-model-wrap">
+                            <div class="pop-up-content-wrap">
+                               <input type="text" class="contactName" id="contactName" placeholder=" NAME CONTACT"><br/>
+                               <button id="addContact" type="submit">add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-overlay"></div>
+                </div>
+                  <div class="numbers-container">
+                    <span class="pushed1">1</span>
+                    <span class="pushed2">2<em>ABC</em></span>
+                    <span class="pushed3">3<em>DEF</em></span>
+                    <span class="pushed4">4<em>GHI</em></span>
+                    <span class="pushed5">5<em>JKL</em></span>
+                    <span class="pushed6">6<em>MNO</em></span>
+                    <span class="pushed7">7<em>PQRS</em></span>
+                    <span class="pushed8">8<em>TUV</em></span>
+                    <span class="pushed9">9<em>WXYZ</em></span>
+                    <span class="pushedasterisk fff">*</span>
+                    <span class="pushed0">0<em>+</em></span>
+                    <span class="pushednumber fff">#</span>
+                  </div>
+                
+                  <div class="call-button" id="callit" style="display: none;">
+                   <i class="icon phone"></i>
+                    </div>
+                    
+              </div>
+
+              <div class="tab clock" id="historyCall">
+                 
+              </div>
+              
+              <div class="tab peoples" id="peoplesId">
+                
+              </div>
+              
+          </div>
+
+      </div>
+      <div class="home-button">
+          <div class="home-button-inner">
+          </div>
+          <!--<div class="home-button-image">
+          </div>-->
+        </div><!-- end screen -->
+        
+  </div>
+</div>
+<script>
+  if (typeof module === "object") {
+    window.module = module;
+    module = undefined;
+  }
+</script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <script  type="text/javascript" src="./scripts/scripts.js"></script>
+  <script src="./scripts/saveData.js"></script>
+  <script>
+    if (window.module) module = window.module;
+  </script>
+  </body>
+</html>
